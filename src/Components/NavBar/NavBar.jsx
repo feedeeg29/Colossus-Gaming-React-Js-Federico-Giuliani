@@ -13,11 +13,11 @@ export default function MyNavBar() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link><Link to={'../MainDiv/MainDiv.jsx'}> Home</Link></Nav.Link>
+                            <Nav><Link to={'/MainDiv'}> Home</Link></Nav>
                             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                <NavDropdown.Item ><Link to={'../Products/GPUs/GPUsListContainer.jsx'}> Inicio</Link></NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2" ><Link to={'../Products/MotherBoards/MotherBoardsListContainer.jsx'}></Link></NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3" ><Link to={'../Products/Processors/ProcessorsListContainer.jsx'}></Link></NavDropdown.Item>
+                                <NavDropdown.Item ><Link to={'./GPUs'}>Placas de Video</Link></NavDropdown.Item>
+                                <NavDropdown.Item ><Link to={'/MotherBoards/'}>MotherBoards</Link></NavDropdown.Item>
+                                <NavDropdown.Item ><Link to={'/Processors'}>Procesadores</Link></NavDropdown.Item>
                                 <NavDropdown.Divider />
                             </NavDropdown>
                         </Nav>

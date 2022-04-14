@@ -1,1 +1,8 @@
-const GPUsArray = [];
+const GPUsArray = [
+    {},
+    {},
+    {},
+    {},
+    {},
+    
+];

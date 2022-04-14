@@ -1,14 +1,14 @@
 import React from "react";
 import MotherBoards from "./MotherBoards";
 
-export default function MotherBoardsList({ motherboardList }) {
+export default function MotherBoardsList({ motherboard }) {
     return (
         <>
-            {motherboardList.map(mother => (
+            {motherboard?.map(m => (
                 <MotherBoards
-                    key={mother.id}
-                    name={mother.name}
-                    image={mother.img} />
+                    key={m.id}
+                    name={m.name}
+                    image={m.img} />
             ))}
         </>
     );

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from "react";
-import CustomFetch from "../../CustomJSFiles/PrivateJS";
-import MotherBoardsArray from "./MothersBoardsArray";
-import MotherBoardsList from "./MotherBoardsList";
+import customFetch from "../../CustomJSFiles/PrivateJS";
+import MotherBoardsArray from "../MotherBoards/MotherBoardsArray";
+import MotherBoardsList from "../MotherBoards/MotherBoardsList";
 
 export default function MotherBoardsListContainer() {
-    const [motherBoardsList, setMotherBoardsList] = useState([]);
+    const [motherBList, setMotherB] = useState([]);
     useEffect(() => {
-        CustomFetch(2000, MotherBoardsArray)
-            .then(res => setMotherBoardsList(res))
+        customFetch(2000, MotherBoardsArray)
+            .then(res => setMotherB(res))
             .catch(err => console.log(err));
-    }, [motherBoardsList]);
+    }, [motherBList]);
     return (
-        <>
-            <div>
-                <MotherBoardsList motherBoardsList={motherBoardsList} />
-            </div>
-        </>
+
+        <div>
+            <MotherBoardsList motherBoardsList={motherBList} />
+        </div>
+
     )
 }
