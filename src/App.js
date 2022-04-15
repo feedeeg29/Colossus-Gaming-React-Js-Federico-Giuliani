@@ -11,10 +11,9 @@ export default function App() {
 <>
 <BrowserRouter>
 <MyNavBar />
-<PrimaryProductsListContainer />
 <Routes>
-  <Route exact path="/" element={<MainDiv />} />
-  <Route exact path="/PrimaryProducts" element={<PrimaryProductsListContainer />} />
+  <Route exact path="/MainDiv" element={<MainDiv />} />
+  <Route exact path="/" element={<PrimaryProductsListContainer />} />
   <Route path="/:categoryId" element={<PrimaryProductsListContainer />} />
 </Routes>
 </BrowserRouter>
