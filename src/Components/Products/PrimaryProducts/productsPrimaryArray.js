@@ -5,6 +5,7 @@ const productsPrimaryArray = [
     price: "285.796,00",
     img: '/MotherBoardsImages/Mother-ASUS-ROG-MAXIMUS-Z690-EXTREME-GLACIAL.jpg',
     categoryId: 'MotherBoards',
+    stock: 15,
     },
     {
         id: 26,
@@ -12,6 +13,7 @@ const productsPrimaryArray = [
         price: "161.988,00",
         img: `/MotherBoardsImages/Mother-ASUS-ROG-MAXIMUS-Z690-EXTREME-EATX.jpg`,
         category: 'MotherBoards',
+        stock: 15,
     },
     {
         id: 27,
@@ -19,6 +21,7 @@ const productsPrimaryArray = [
         price: "116.820,00",
         img: `/MotherBoardsImages/Mother-ASUS-ROG-MAXIMUS-Z690-FORMULA.jpg`,
         category: "MotherBoards",
+        stock: 15,
     },
     {
         id: 28,
@@ -26,6 +29,7 @@ const productsPrimaryArray = [
         price: "115.890,00",
         img: `/MotherBoardsImages/Mother-ASUS-ROG-MAXIMUS-XIII-EXTREME-Z590-EATX.jpg`,
         category: "MotherBoards",
+        stock: 15,
     },
     {
         id: 29,
@@ -33,24 +37,28 @@ const productsPrimaryArray = [
         price: "104.890,00",
         img: `/MotherBoardsImages/Mother-ASUS-ROG-MAXIMUS-Z690-APEX.jpg`,
         category: "MotherBoards",
+        stock: 15,
     },
     {	id: 1,
         name: "Procesador Intel Core i9-11900K 5.3GHz Turbo Socket 1200",
         price: "81.060,00",
         img: '/ProcessorsImages/Procesador-Intel-Core-i9-11900K-5.3GHz-Turbo-Socket-1200.jpg',
         category: 'Processors',
+        stock: 15,
     },
     {    id: 2,
         name:"Procesador Intel Core i7 12700K 5.0GHz Turbo Socket 1700",
         price: "65.060,00",
-        img: '/ProcessorsImages/Intel-Core-i7-12700K-5.0GHz-Turbo-Socket-1700.jpg',
+        img: '/ProcessorsImages/Procesador-Intel-Core-i7-12700K-5.0GHz-Turbo-Socket-1700.jpg',
         category: 'Processors',
+        stock: 15,
     },
     {    id: 3,
         name:"Procesador Intel Core i9 10900KF 5.3GHz Turbo",
         price: "64.990,00",
         img: '/ProcessorsImages/Procesador-Intel-Core-i9-10900KF-5.3GHz-Turbo.jpg',
         category: 'Processors',
+        stock: 15,
     }
     ];
 export default productsPrimaryArray;

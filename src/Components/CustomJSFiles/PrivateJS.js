@@ -1,4 +1,4 @@
-const customFetch = (time,task,categoryId) => {
+const customFetchCategory = (time,task,categoryId) => {
     return new Promise((resolve,reject) => {
         const filterProducts = task.filter(
             (product) => product.category === categoryId
@@ -8,4 +8,6 @@ const customFetch = (time,task,categoryId) => {
         },time);
     });
 }
-export default customFetch;
+export default customFetchCategory;
+
+

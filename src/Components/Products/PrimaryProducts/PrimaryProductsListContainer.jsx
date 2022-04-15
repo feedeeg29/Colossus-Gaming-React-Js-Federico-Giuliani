@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import customFetch from "../../CustomJSFiles/PrivateJS";
 import productsPrimaryArray from "./productsPrimaryArray";
 import PrimaryProductsList from "./PrimaryProducstList";
+import customFetchCategory from "../../CustomJSFiles/PrivateJS";
 
 export default function PrimaryProductsListContainer() {
     const [primaryProductsRender, setProductsPrimaryRender] = useState([]);
     const { categoryId } = useParams();
     useEffect(() => {
-
-        customFetch(200, productsPrimaryArray, categoryId)
+        customFetchCategory(200, productsPrimaryArray, categoryId)
             .then(res => setProductsPrimaryRender(res))
             .catch(err => console.log(err));
     }, [categoryId]);
     return (
 
         <div>
-            <PrimaryProductsList productsPrimary={primaryProductsRender} />
+            <PrimaryProductsList productsPrimaryRender={primaryProductsRender} />
         </div>
 
     )

@@ -1,16 +1,17 @@
 import React from "react";
 import PrimaryProducts from "./PrimaryProducts";
-
-export default function PrimaryProductsList({ productsPrimary }) {
+import './stylebasic.css';
+export default function PrimaryProductsList({ productsPrimaryRender }) {
     return (
         <>
-            {productsPrimary.map(m => (
-                <PrimaryProducts
-                    key={m.id}
-                    id={m.id}
-                    nombre={m.name}
-                    img={m.img} />
-            ))}
+            <div className="product-grid">
+                {productsPrimaryRender.map(p => (
+                    <PrimaryProducts
+                        key={p.id}
+                        id={p.id}
+                        nombre={p.name}
+                        img={p.img} />))}
+            </div>
         </>
     );
 }

@@ -14,9 +14,9 @@ export default function MyNavBar() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Link to={'/MainDiv'} style={{ margin: '0px 7px' }}> Home</Link>
-                            <Link to={'./GPUs/'} style={{ margin: '0px 7px' }}>Placas de Video</Link>
-                            <Link to={'/MotherBoards/'} style={{ margin: '0px 7px' }}>MotherBoards</Link>
-                            <Link to={'/Processors/'} style={{ margin: '0px 7px' }}>Procesadores</Link>
+                            <Link to={'category/GPUs'} style={{ margin: '0px 7px' }}>Placas de Video</Link>
+                            <Link to={'category/MotherBoards/'} style={{ margin: '0px 7px' }}>MotherBoards</Link>
+                            <Link to={'category/Processors/'} style={{ margin: '0px 7px' }}>Procesadores</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

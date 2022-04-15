@@ -4,7 +4,7 @@ import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ItemCount({ stock }) {
-    const notify = () => toast("Agregaste" + " " + count + "al carrito");
+    const notify = () => toast("Agregaste" + " " + count + " " + "al carrito");
 
     const [count, setCount] = useState(0);
 

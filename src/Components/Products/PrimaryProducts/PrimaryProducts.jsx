@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-
+import { Link } from "react-router-dom";
 export default function PrimaryProducts({ id, nombre, img }) {
     return (
         <>
@@ -9,6 +9,7 @@ export default function PrimaryProducts({ id, nombre, img }) {
                 <Card.Body>
                     <Card.Title>{nombre}</Card.Title>
                 </Card.Body>
+                <Link to={`/detail/${id}`}>Detalle</Link>
             </Card>
         </>
     );
