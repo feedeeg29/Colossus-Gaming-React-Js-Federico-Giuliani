@@ -6,10 +6,11 @@ import GPUsArray from './GPUsArrayJS';
 export default function GPUsListContainer() {
     const [gpuList, setGPUList] = useState([]);
     useEffect(() => {
-        CustomFetch(2000, GPUsArray)
+        CustomFetch(200, GPUsArray)
             .then(res => setGPUList(res))
             .catch(err => console.log(err));
-    }, [gpuList]);
+    }, []);
+    console.log(JSON.stringify(GPUsArray,null,2))
     return (
         <>
             <div>

@@ -7,8 +7,9 @@ export default function MotherBoardsList({ motherboard }) {
             {motherboard?.map(m => (
                 <MotherBoards
                     key={m.id}
-                    name={m.name}
-                    image={m.img} />
+                    id={m.id}
+                    nombre={m.name}                    
+                    img={m.img} />
             ))}
         </>
     );

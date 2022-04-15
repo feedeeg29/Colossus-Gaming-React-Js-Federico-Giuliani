@@ -6,14 +6,15 @@ import MotherBoardsList from "../MotherBoards/MotherBoardsList";
 export default function MotherBoardsListContainer() {
     const [motherBList, setMotherB] = useState([]);
     useEffect(() => {
-        customFetch(2000, MotherBoardsArray)
+        customFetch(200, MotherBoardsArray)
             .then(res => setMotherB(res))
             .catch(err => console.log(err));
-    }, [motherBList]);
+    }, []);
+    console.log(motherBList)
     return (
 
-        <div>
-            <MotherBoardsList motherBoardsList={motherBList} />
+        <div style={{"display": "flex"}}>
+            <MotherBoardsList motherboard={motherBList} />
         </div>
 
     )
