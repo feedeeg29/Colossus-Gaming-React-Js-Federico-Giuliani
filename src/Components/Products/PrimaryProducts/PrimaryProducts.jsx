@@ -1,13 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-export default function GPUs({ id, name, image }) {
+export default function PrimaryProducts({ id, nombre, img }) {
     return (
         <>
             <Card key={id} id={id} style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={image} />
+                <Card.Img variant="top" src={img} />
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title>{nombre}</Card.Title>
                 </Card.Body>
             </Card>
         </>
