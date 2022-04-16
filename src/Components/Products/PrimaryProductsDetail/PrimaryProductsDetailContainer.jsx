@@ -6,17 +6,17 @@ import { useParams } from "react-router-dom";
 
 export default function PrimaryProductsDetailContainer() {
     const [primaryProductsDetailRender, setItems] = useState([]);
-    const { id } = useParams();
+    const { Id } = useParams();
 
     useEffect(() => {
-        customFetchId(200, productsPrimaryArray, id)
+        customFetchId(200, productsPrimaryArray, Id)
             .then(res => setItems(res))
             .catch(err => console.log(err));
-    }, [id]);
+    }, [Id]);
 
     return (
 
-        <PrimaryProductsDetail key={primaryProductsDetailRender.id} id={primaryProductsDetailRender.id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />
+        <PrimaryProductsDetail key={primaryProductsDetailRender.Id} id={primaryProductsDetailRender.Id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />
 
     )
 }
