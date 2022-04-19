@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { toast, ToastContainer } from "react-toastify";
+// import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function ItemCount({ stock }) {
-    const notify = () => toast("Agregaste" + " " + count + " " + "al carrito");
+export default function ItemCount({ stock, onAdd }) {
+    // const notify = () => toast("Agregaste" + " " + count + " " + "al carrito");
 
     const [count, setCount] = useState(0);
 
@@ -30,7 +30,7 @@ export default function ItemCount({ stock }) {
             <Button onClick={add}> + </Button>
             <Button onClick={subsTract}> - </Button>
             <Button onClick={reset}> Resetar </Button>
-            <Button onClick={notify}> Agregar al carrito </Button>
+            <Button onClick={() => onAdd(count)}> Agregar al carrito </Button>
         </>
     )
 };
