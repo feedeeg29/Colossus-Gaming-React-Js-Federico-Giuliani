@@ -7,9 +7,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainDiv from './Components/MainDiv/MainDiv.jsx';
 import PrimaryProductsDetailContainer from '../src/Components/Products/PrimaryProductsDetail/PrimaryProductsDetailContainer';
 import Cart from './Components/Cart/Cart';
+import CartContextProvider from './Components/CartContext/CartContext';
 export default function App() {
   return (
 <>
+<CartContextProvider>
 <BrowserRouter>
 <MyNavBar />
 <Routes>
@@ -20,6 +22,7 @@ export default function App() {
   <Route excat path="/Cart/Cart" element={<Cart />} />
 </Routes>
 </BrowserRouter>
+</CartContextProvider>
 </>
   );
 }
