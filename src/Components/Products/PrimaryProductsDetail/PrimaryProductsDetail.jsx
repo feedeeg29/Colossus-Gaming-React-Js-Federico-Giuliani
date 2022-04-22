@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ItemCount from "../PrimaryProductsDetail/ItemCount/ItemCount";
 import { Card } from "react-bootstrap";
 import './detail.css'
-import Decision from "../../Decision";
+import { CartContext } from "../../CartContext/CartContext";
+import Decision from '../../Decision/Decision';
 export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
     const [count, setCount] = useState(0);
     const onAdd = (cuantity) => {
@@ -16,7 +17,7 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>${price}</Card.Text>
-                    {added ? <ItemCount stock={stock} onAdd={onAdd} /> : <Decision />}
+                    {added ? <ItemCount stock={stock} /> : <Decision />}
                 </Card.Body>
             </Card>
         </>

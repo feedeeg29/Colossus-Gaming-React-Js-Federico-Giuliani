@@ -7,7 +7,7 @@ import CartWidget from "../CartWidget/CartWidget";
 export default function MyNavBar() {
     return (
         <>
-            <Navbar bg="light" variant="light" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <ToastContainer />
                 <Container className="NavBar">
                     <Navbar.Brand href="#home">Colossus-Gaming</Navbar.Brand>
