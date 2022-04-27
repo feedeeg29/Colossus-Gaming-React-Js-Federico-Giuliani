@@ -5,8 +5,6 @@ import { Button } from "react-bootstrap";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
-    // const notify = () => toast("Agregaste" + " " + count + " " + "al carrito");
-
     const { cart, addToCart, removeFromCart, buyAll } = useContext(CartContext);
     const [count, setCount] = useState(0);
     function add() {
@@ -28,12 +26,10 @@ export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
     return (
         <>
             <p>{count}</p>
-            <Button onClick={add}> + </Button>
-            <Button onClick={subsTract}> - </Button>
-            <Button onClick={reset}> Resetar </Button>
-            <Button onClick={() => {
-                addToCart({ ...productsPrimaryRender, count });
-            }}>Agregar al carrito </Button>
+            <Button onClick={add} variant="primary"> + </Button>
+            <Button onClick={subsTract} variant="secondary"> - </Button>
+            <Button onClick={reset} variant="warning"> Resetar </Button>
+            <Button onClick={() => onAdd(count)} variant="success">Agregar Al Carrito</Button>;
         </>
     )
 };

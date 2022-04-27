@@ -1,10 +1,10 @@
-    const customFetchId = (time,task,Id) => {
+    const customFetchId = (time,task,id) => {
     return new Promise((resolve,reject) => {
         const filterProductsId = task.find(
-            (product) => product.id === Number(Id)
+            (product) => product.id === Number(id)
         )
         setTimeout(() => {
-            Id? resolve(filterProductsId): resolve(task);
+            id? resolve(filterProductsId): resolve(task);
         },time);
     });
 }

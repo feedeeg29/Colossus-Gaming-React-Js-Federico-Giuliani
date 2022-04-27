@@ -12,11 +12,11 @@ export default function MyNavBar() {
                 <Container className="NavBar">
                     <Navbar.Brand href="#home">Colossus-Gaming</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Link to={'/MainDiv'} style={{ margin: '0px 7px' }}> Home</Link>
-                        <Link to={'category/GPUs'} style={{ margin: '0px 7px' }}>Placas de Video</Link>
-                        <Link to={'category/MotherBoards/'} style={{ margin: '0px 7px' }}>MotherBoards</Link>
-                        <Link to={'category/Processors/'} style={{ margin: '0px 7px' }}>Procesadores</Link>
-                        <CartWidget><Link to={'/Cart/Cart'} /></CartWidget>
+                        <Link to={'/MainDiv'} style={{ margin: '0px 7px', textDecoration: "none", color: "white" }}> Home</Link>
+                        <Link to={'category/GPUs'} style={{ margin: '0px 7px', textDecoration: "none", color: "white" }}>Placas de Video</Link>
+                        <Link to={'category/MotherBoards/'} style={{ margin: '0px 7px', textDecoration: "none", color: "white" }}>MotherBoards</Link>
+                        <Link to={'category/Processors/'} style={{ margin: '0px 7px', textDecoration: "none", color: "white" }}>Procesadores</Link>
+                        <Link to={'/Cart/Cart'} style={{ textDecoration: "none", color: "white", marginLeft: "20px" }}><CartWidget /></Link>
                     </Nav>
                 </Container>
             </Navbar>

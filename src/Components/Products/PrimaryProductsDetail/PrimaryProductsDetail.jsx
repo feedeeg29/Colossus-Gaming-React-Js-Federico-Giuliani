@@ -6,10 +6,12 @@ import { CartContext } from "../../CartContext/CartContext";
 import Decision from '../../Decision/Decision';
 export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
     const [count, setCount] = useState(0);
-    const onAdd = (cuantity) => {
-        setCount(cuantity);
+    const { cart, addToCart, isInCart } = useContext(CartContext);
+
+    function handleOnAdd(quantity) {
+        addToCart({ Id, name, img, price, stock }, quantity)
     }
-    const added = (count === 0);
+    // const added = cart.find(item => item.id === Id);
     return (
         <>
             <Card key={Id} id={Id} style={{ width: "18rem" }} className="Card-Basic">
@@ -17,7 +19,7 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>${price}</Card.Text>
-                    {added ? <ItemCount stock={stock} /> : <Decision />}
+                    {isInCart ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <Decision />}
                 </Card.Body>
             </Card>
         </>
