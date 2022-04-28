@@ -13,10 +13,7 @@ export default function PrimaryProductsDetailContainer() {
             .then(res => setItems(res))
             .catch(err => console.log(err));
     }, [Id]);
-
     return (
-
-        <PrimaryProductsDetail key={primaryProductsDetailRender.Id} id={primaryProductsDetailRender.Id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />
-
+        <PrimaryProductsDetail key={primaryProductsDetailRender.Id} Id={primaryProductsDetailRender.Id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />
     )
 }
