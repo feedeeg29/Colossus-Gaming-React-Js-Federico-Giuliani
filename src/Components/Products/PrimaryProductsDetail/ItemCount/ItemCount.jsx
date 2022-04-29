@@ -1,11 +1,10 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../../CartContext/CartContext";
 import { Button } from "react-bootstrap";
-// import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
-    const { cart, addToCart, removeFromCart, buyAll } = useContext(CartContext);
+    // const { cart, addToCart, removeFromCart, buyAll } = useContext(CartContext);
     const [count, setCount] = useState(1);
     function add() {
         if (count < stock) {

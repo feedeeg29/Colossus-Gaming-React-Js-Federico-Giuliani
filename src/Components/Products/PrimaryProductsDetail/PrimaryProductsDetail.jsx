@@ -4,22 +4,22 @@ import { Card } from "react-bootstrap";
 import './detail.css'
 import { CartContext } from "../../CartContext/CartContext";
 import Decision from '../../Decision/Decision';
-export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
+export default function PrimaryProductsDetail({ id, name, img, price, stock }) {
     const [count, setCount] = useState(0);
-    const { cart, addToCart, isInCart } = useContext(CartContext);
+    const { cart, addToCart } = useContext(CartContext);
 
     function handleOnAdd(quantity) {
-        addToCart({ Id, name, img, price, stock }, quantity)
+        addToCart({ id, name, img, price, stock }, quantity)
     }
-    const added = cart.find(item => item.id === Id);
+    const added = cart.find(item => item.id === id);
     return (
         <>
-            <Card key={Id} id={Id} style={{ width: "18rem" }} className="Card-Basic">
+            <Card key={id} id={id} style={{ width: "18rem" }} className="Card-Basic">
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>${price}</Card.Text>
-                    {added ? <Decision /> : <ItemCount stock={stock} onAdd={handleOnAdd} />}
+                    {!added ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <Decision />}
                 </Card.Body>
             </Card>
         </>
