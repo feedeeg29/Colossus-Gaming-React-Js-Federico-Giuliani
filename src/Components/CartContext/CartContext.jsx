@@ -2,11 +2,11 @@ import React, { useState, createContext } from 'react'
 export const CartContext = createContext();
 const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
-    const isInCart = (id) => { cart.some(item => item.id === id) }
+    const isInCart = (Id) => { cart.find(item => item.Id === Id) }
     const addToCart = (item, quantity) => {
-        if (isInCart(item.id)) {
+        if (isInCart(item.Id)) {
             const newCart = cart.map(cartElement => {
-                if (cartElement.id === item.id) {
+                if (cartElement.Id === item.Id) {
                     return { ...cartElement, quantity: cartElement.quantity + quantity }
                 } else return cartElement
             })

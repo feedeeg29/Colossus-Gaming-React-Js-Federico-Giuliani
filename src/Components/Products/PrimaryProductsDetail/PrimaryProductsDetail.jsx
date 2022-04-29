@@ -11,7 +11,7 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
     function handleOnAdd(quantity) {
         addToCart({ Id, name, img, price, stock }, quantity)
     }
-    // const added = cart.find(item => item.id === Id);
+    const added = cart.find(item => item.id === Id);
     return (
         <>
             <Card key={Id} id={Id} style={{ width: "18rem" }} className="Card-Basic">
@@ -19,7 +19,7 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>${price}</Card.Text>
-                    {isInCart ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <Decision />}
+                    {added ? <Decision /> : <ItemCount stock={stock} onAdd={handleOnAdd} />}
                 </Card.Body>
             </Card>
         </>

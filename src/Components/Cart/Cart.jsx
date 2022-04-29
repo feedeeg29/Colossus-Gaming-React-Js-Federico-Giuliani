@@ -13,7 +13,7 @@ export default function Cart() {
             <>
                 <div>
                     <h1>Tu carrito esta Vacio</h1>
-                    <h2>Porque no sigues buscando?</h2>
+                    <h2>Por que no sigues buscando?</h2>
                     <Link to={'/MainDiv'}><Button>Volver al Inicio</Button></Link>
                 </div>
             </>
