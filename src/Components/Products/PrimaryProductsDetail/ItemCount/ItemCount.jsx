@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
     const { cart, addToCart, removeFromCart, buyAll } = useContext(CartContext);
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
     function add() {
         if (count < stock) {
             setCount(count + 1);
@@ -14,7 +14,7 @@ export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
     };
 
     function subsTract() {
-        if (count > 0) {
+        if (count > 1) {
             setCount(count - 1);
         };
     };
