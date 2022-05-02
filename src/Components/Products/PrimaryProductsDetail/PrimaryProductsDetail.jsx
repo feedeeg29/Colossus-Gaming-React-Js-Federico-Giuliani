@@ -1,11 +1,10 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import ItemCount from "../PrimaryProductsDetail/ItemCount/ItemCount";
 import { Card } from "react-bootstrap";
 import './detail.css'
 import { CartContext } from "../../CartContext/CartContext";
 import Decision from '../../Decision/Decision';
 export default function PrimaryProductsDetail({ id, name, img, price, stock }) {
-    const [count, setCount] = useState(0);
     const { cart, addToCart } = useContext(CartContext);
 
     function handleOnAdd(quantity) {

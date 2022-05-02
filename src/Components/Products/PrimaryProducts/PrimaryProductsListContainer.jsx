@@ -9,6 +9,7 @@ export default function PrimaryProductsListContainer() {
         //prueba firebase
         if (categoryId) {
             getProductsByCategoryId(categoryId).then(prods => setProductsPrimaryRender(prods));
+
         }
     }, [categoryId]);
 

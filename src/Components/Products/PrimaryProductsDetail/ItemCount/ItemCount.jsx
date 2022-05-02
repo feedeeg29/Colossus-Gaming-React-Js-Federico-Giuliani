@@ -1,5 +1,4 @@
-import React, { useState, useContext } from "react";
-import { CartContext } from "../../../CartContext/CartContext";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import 'react-toastify/dist/ReactToastify.css';
 
