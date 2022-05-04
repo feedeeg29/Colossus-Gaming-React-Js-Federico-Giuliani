@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 import { Card, Button } from 'react-bootstrap'
 import { CartContext } from '../CartContext/CartContext'
 export default function Cart() {
-    const { cart, removeFromCart, buyAll } = useContext(CartContext);
-    const total = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-    const prdQTotal = cart.reduce((total, item) => total + item.quantity, 0);
+    const { cart, removeFromCart, total, prdQTotal } = useContext(CartContext);
+
     console.log(total);
+    console.log(cart);
     if (cart.length === 0) {
         return (
             <>
@@ -38,7 +38,7 @@ export default function Cart() {
                 </div>
                 <h1>Total de productos {prdQTotal}</h1>
                 <h2> Subtotal ${total}</h2>
-                <Button onClick={buyAll}>Comprar todo</Button>
+                <Link to={'/ContactForm'}><Button>Comprar todo</Button></Link>
             </>)
     }
 }

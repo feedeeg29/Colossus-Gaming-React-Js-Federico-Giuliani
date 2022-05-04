@@ -15,13 +15,19 @@ const CartContextProvider = ({ children }) => {
             setCart(prev => [...prev, { ...item, quantity }])
         }
     }
+
+    const total = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+    const prdQTotal = cart.reduce((total, item) => total + item.quantity, 0);
     const removeFromCart = (id) => {
-        setCart(cart.filter(item => item.Id !== id));
+        setCart(cart.filter((item) => item.Id !== id));
     };
+    const clearCart = () => {
+        setCart([]);
+    }
     const buyAll = () => setCart([]);
     return (
         <>
-            <CartContext.Provider value={{ cart, addToCart, removeFromCart, buyAll, isInCart }}>{children}</CartContext.Provider>
+            <CartContext.Provider value={{ cart, addToCart, removeFromCart, buyAll, isInCart, total, prdQTotal, clearCart }}>{children}</CartContext.Provider>
         </>
     )
 }

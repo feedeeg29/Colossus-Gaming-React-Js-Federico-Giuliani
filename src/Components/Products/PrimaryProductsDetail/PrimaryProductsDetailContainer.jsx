@@ -15,7 +15,7 @@ export default function PrimaryProductsDetailContainer() {
     }, [Id]);
     return (
         <>
-            <PrimaryProductsDetail key={primaryProductsDetailRender.id} id={primaryProductsDetailRender.id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />
+            <PrimaryProductsDetail key={primaryProductsDetailRender.Id} Id={primaryProductsDetailRender.Id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />
         </>
     )
 }
