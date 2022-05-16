@@ -1,7 +1,100 @@
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+@media screen and (min-width: 992px) {
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 25vw));
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+
+    .list-Container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-product {
+        margin: 1vh;
+        padding: 1vh;
+        height: 500px;
+        max-width: 25vw;
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        justify-content: center;
+        gap: 1rem;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+
+    .main-product img {
+        padding: 1vh;
+        max-width: 250px;
+        display: flex;
+        justify-content: flex-end;
+        justify-self: center;
+    }
+
+    .main-product h2 {
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .main-product:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+    .product-grid {
+        display: grid;
+        grid-template-rows: repeat(auto-fit, minmax(20vw, 1rem));
+        border: 1px solid black;
+        gap: 2rem;
+        padding-top: 15px;
+    }
+
+    .what {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* height: 100000px; */
+    }
+
+    .main-product {
+        place-self: center;
+        max-height: 206px;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    .main-product:hover {
+        transform: scale(1.1, 1.1);
+    }
+
+    .main-product img {
+        display: flex;
+        justify-content: flex-start;
+        justify-self: flex-start;
+        max-width: 15vw;
+        max-height: 15vh;
+    }
+
+    .main-product h2 {
+        justify-content: center;
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
 }

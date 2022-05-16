@@ -3,7 +3,6 @@ import { Button } from "react-bootstrap";
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
-    // const { cart, addToCart, removeFromCart, buyAll } = useContext(CartContext);
     const [count, setCount] = useState(1);
     function add() {
         if (count < stock) {
@@ -24,10 +23,10 @@ export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
     return (
         <>
             <p>{count}</p>
-            <Button onClick={add} variant="primary"> + </Button>
-            <Button onClick={subsTract} variant="secondary"> - </Button>
-            <Button onClick={reset} variant="warning"> Resetar </Button>
-            <Button onClick={() => onAdd(count)} variant="success">Agregar Al Carrito</Button>;
+            <Button onClick={add} style={{ backgroundColor: "#086972" }}> + </Button>
+            <Button onClick={subsTract} style={{ backgroundColor: "#086972" }}> - </Button>
+            <Button onClick={reset} > Resetear </Button>
+            <Button onClick={() => onAdd(count)} >Agregar Al Carrito</Button>
         </>
     )
 };

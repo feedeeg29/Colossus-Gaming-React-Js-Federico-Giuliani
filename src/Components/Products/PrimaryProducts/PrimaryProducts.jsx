@@ -1,17 +1,16 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
-import '../PrimaryProductsDetail/detail.css'
+import './stylebasic.css';
+
 export default function PrimaryProducts({ id, nombre, img }) {
     return (
         <>
-            <Card key={id} id={id} style={{ width: "18rem" }} >
-                <Card.Img variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>{nombre}</Card.Title>
-                </Card.Body>
-                <Link to={`/detail/${id}`}>Detalle</Link>
-            </Card>
+            <div className="main-product" key={id} id={id} >
+                <Link to={`/detail/${id}`} ><img src={img} alt="" /></Link>
+                <div>
+                    <Link to={`/detail/${id}`} style={{ textDecoration: "none", color: "black" }}><h2 >{nombre}</h2></Link>
+                </div>
+            </div>
         </>
     );
 }

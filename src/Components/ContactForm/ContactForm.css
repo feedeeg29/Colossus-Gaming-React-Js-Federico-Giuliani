@@ -1,0 +1,47 @@
+.body_contacto {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: rgb(53, 51, 51);
+    display: grid;
+}
+
+.Contacto {
+    display: flex;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    align-self: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.formulario {
+    display: flex;
+    border: none;
+    max-width: 250px;
+}
+
+.campo {
+    margin: 0.75rem;
+}
+
+label {
+    display: block;
+}
+
+input {
+    padding: 0.3rem;
+    width: 100%
+}
+
+textarea {
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+#zona {
+    border: blanchedalmond solid 1p x;
+}

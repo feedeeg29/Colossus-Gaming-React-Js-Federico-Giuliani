@@ -9,20 +9,23 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
 
     function handleOnAdd(quantity) {
         addToCart({ Id, name, img, price, stock }, quantity)
+        console.log(added)
     }
-    const added = cart.find((item) => item.id === Id);
+    const added = cart.find((item) => item.Id === Id);
 
     console.log(added);
     return (
         <>
-            <Card key={Id} id={Id} style={{ width: "18rem" }} className="Card-Basic">
-                <Card.Img variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>${price}</Card.Text>
-                    {!added ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <Decision />}
-                </Card.Body>
-            </Card>
+            <div className="detail-container">
+                <Card key={Id} id={Id} style={{ width: "18rem" }} className="Card-Basic">
+                    <Card.Img variant="top" src={img} />
+                    <Card.Body>
+                        <Card.Title>{name}</Card.Title>
+                        <Card.Text>${price}</Card.Text>
+                        {!added ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <Decision />}
+                    </Card.Body>
+                </Card>
+            </div>
         </>
     );
 }

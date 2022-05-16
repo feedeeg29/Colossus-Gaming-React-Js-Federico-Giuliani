@@ -1,82 +1,54 @@
-import React, { useState, useContext } from 'react'
+import React, { useState } from 'react'
 import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
-import { CartContext } from '../CartContext/CartContext';
-import { Form, Button, Modal } from 'react-bootstrap';
 export default function ContactForm() {
-    const { cart, clearCart, total } = useContext(CartContext);
-
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
-    const [orderCode, setOrderCode] = useState('');
+    const [query, setQuery] = useState('');
+    const [queryCode, setQueryCode] = useState('');
 
-    const order = {
+    const inQuery = {
         buyer: { name: name, phone: phone, email: email, address: address },
-        items: cart,
-        total: total,
+        query: query,
         date: serverTimestamp()
     }
-    const sendOrder = () => {
+    const sendQuery = () => {
         const db = getFirestore();
-        const orderCollection = collection(db, 'Orders');
-        addDoc(orderCollection, order).then(({ id }) => {
-            setOrderCode(id);
-            clearCart();
+        const queryCollection = collection(db, 'Contact');
+        addDoc(queryCollection, inQuery).then(({ id }) => {
+            setQueryCode(id);
         })
     }
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
     return (
         <>
-            <div>
-                <Form onSubmit={(e) => { e.preventDefault(); sendOrder() }}>
-                    <input type="text" value={name} name="nameForm" id="nameForm" placeholder="name"
-                        onChange={(e) => setName(e.target.value)} required
-                    />
-                    <input type="text" value={email} name="emailForm" id="emailForm" placeholder='email@email.com'
-                        onChange={(e) => setEmail(e.target.value)} required
-                    />
-                    <input type="text" value={phone} name="phoneForm" id="phoneForm" placeholder='+54(0XX)XXX-XX-XX'
-                        onChange={(e) => setPhone(e.target.value)} required
-                    />
-                    <input type="text" value={address} name="addressForm" id="addressForm" required placeholder='Avenida Siempre Viva 123'
-                        onChange={(e) => setAddress(e.target.value)}
-                    />
-                    {
-                        cart.length === 0 ?
-                            <Button variant="contained" disabled>Enviar</Button> :
-                            <Button onClick={handleOpen} type="submit" variant="contained">Enviar</Button>
-                    }
-                </Form>
-                {
-                    orderCode === "" ? null :
-                        <Modal
-                            show={open}
-                            size="lg"
-                            aria-labelledby="contained-modal-title-vcenter"
-                            centered
-                        >
-                            <Modal.Header closeButton>
-                                <Modal.Title id="contained-modal-title-vcenter">
-                                    Modal heading
-                                </Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>
-                                <h2>{name}</h2>
-                                <h2>{email}</h2>
-                                <h2>{phone}</h2>
-                                <h2>{address}</h2>
-                                <h2>{total}</h2>
-                                <h2>{orderCode}</h2>
-                            </Modal.Body>
-                            <Modal.Footer>
-                                <Button onClick={handleClose}>Close</Button>
-                            </Modal.Footer>
-                        </Modal>
-                }
+            <div className='body_contacto'>
+                <form action="#" className="Contacto" onSubmit={(e) => { e.preventDefault(); sendQuery() }}>
+                    <fieldset className="Formulario" id="zona">
+                        <legend className="titulo" id="letras">
+                            Formulario de Contacto
+                        </legend>
+                        <div className="campo" id="zona">
+                            <input type="text" id="nombre" value={name} name="Nombre" placeholder="Federico Giuliani" onChange={(e) => setName(e.target.value)} />
+                        </div>
+                        <div className="campo" id="zona">
+                            <input type="text" id="contacto" name="contacto" value={phone} placeholder="Ej: 11-5023-405" onChange={(e) => setPhone(e.target.value)} />
+                        </div>
+                        <div className="campo" id="zona">
+                            <input type="email" id="email" value={email} name="email" placeholder="correoelectronico@correo.com" onChange={(e) => setEmail(e.target.value)} />
+                        </div>
+                        <div className="campo" id="zona">
+                            <input type="address" id="address" value={address} name="email" placeholder="correoelectronico@correo.com" onChange={(e) => setAddress(e.target.value)} />
+                        </div>
+                        <div className="campo" id="zona">
+                            <textarea name="consulta" id="consulta" cols="50" rows="10" value={query} onChange={(e) => setQuery(e.target.value)} />
+                        </div>
+                        <div>
+                            <input type="submit" value="enviar" onSubmit={(e) => { e.preventDefault(); sendQuery() }} />
+                            <input type="reset" value="reset" />
+                        </div>
+                    </fieldset>
+                </form>
             </div>
-        </>
-    )
+        </>)
 }

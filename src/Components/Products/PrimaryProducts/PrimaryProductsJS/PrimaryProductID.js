@@ -10,3 +10,4 @@ import {doc, getDoc, getFirestore} from 'firebase/firestore';
         return null;
     }
 }
+
