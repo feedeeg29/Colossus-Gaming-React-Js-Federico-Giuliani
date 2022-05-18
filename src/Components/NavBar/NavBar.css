@@ -7,9 +7,19 @@
 
 .darkBackgroundLink {
     text-decoration: none;
-    color: wheat;
+    color: #FAF0D7;
     padding-left: 50px;
     margin: 0px 7px 0px 7px
+}
+
+.lightBackgroundLink:hover {
+    color: aliceblue;
+    transform: scale(1.5, 1.5);
+}
+
+.darkBackgroundLink:hover {
+    color: aliceblue;
+    transform: scale(1.5, 1.5);
 }
 
 .darkBackgroundNavBar {
@@ -20,10 +30,12 @@
     background: linear-gradient(to right, #086972, #FAF0D7)
 }
 
-.darkBackgroundBrand {
+.darkBackgroundBrand .navbar-brand {
     color: #FAF0D7;
+    text-decoration: none;
 }
 
 .lightBackgroundBrand {
     color: black;
+    text-decoration: none;
 }

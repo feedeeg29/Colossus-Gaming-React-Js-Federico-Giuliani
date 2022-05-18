@@ -23,13 +23,23 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
                         <Card.Body>
                             <Card.Title className={`${darkTheme ? 'darkBackgroundTitle' : 'lightBackgroundTitle'}`}>{name}</Card.Title>
                             <Card.Text className={`${darkTheme ? 'darkBackgroundPrice' : 'lightBackgroundPrice'}`}>${price}</Card.Text>
-                            <p>Stock disponible: {stock}</p>
+                            <p className={`${darkTheme ? 'darkBackgroundPrice' : 'lightBackgroundPrice'}`}>Stock disponible: {stock}</p>
                             {!added ? <ItemCount stock={stock} onAdd={handleOnAdd} /> : <Decision />}
                         </Card.Body>
                     </Card>
                 </div>
                 :
-                <div><h1>puta</h1></div>
+                <div className={`${darkTheme ? 'darkBackgroundDetail' : 'lightBackgroundDetail '}`}>
+                    <Card className={`${darkTheme ? 'darkBackgroundCard ' : 'lightBackgroundCard '}`} key={Id} id={Id} >
+                        <Card.Img variant="top" src={img} />
+                        <Card.Body>
+                            <Card.Title className={`${darkTheme ? 'darkBackgroundTitle' : 'lightBackgroundTitle'}`}>{name}</Card.Title>
+                            <Card.Text className={`${darkTheme ? 'darkBackgroundPrice' : 'lightBackgroundPrice'}`}>${price}</Card.Text>
+                            <p className={`${darkTheme ? 'darkBackgroundPrice' : 'lightBackgroundPrice'}`}>Producto sin stock!</p>
+                        </Card.Body>
+                    </Card>
+                </div>
+
             }
         </>
     );

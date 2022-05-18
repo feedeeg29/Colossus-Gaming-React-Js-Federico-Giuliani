@@ -1,13 +1,13 @@
-.body_contacto {
+.body_contact {
+
     margin: 0;
     padding: 0;
     width: 100%;
     flex-wrap: wrap;
-    background-color: rgb(53, 51, 51);
     display: grid;
 }
 
-.Contacto {
+.Contact {
     display: flex;
     justify-content: center;
     border: none;
@@ -16,13 +16,26 @@
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-.formulario {
-    display: flex;
-    border: none;
-    max-width: 250px;
+.darkThemeContact .title {
+    color: #FAF0D7;
 }
 
-.campo {
+
+.darkThemeContact .button {
+    background-color: #FAF0D7;
+    color: black;
+}
+
+.lightThemeContact .title {
+    color: black;
+}
+
+.lightThemeContact .button {
+    color: #FAF0D7;
+    background-color: black;
+}
+
+.field {
     margin: 0.75rem;
 }
 

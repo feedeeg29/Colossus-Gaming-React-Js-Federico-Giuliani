@@ -1,0 +1,66 @@
+.darkBackgroundButtonReset {
+    background-color: #FAF0D7;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.darkBackgroundButtonSubs {
+    background-color: #FAF0D7;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.darkBackgroundButtonAdd {
+    background-color: #FAF0D7;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.darkBackgroundQuantity {
+    background-color: #FAF0D7;
+    width: 50px;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.darkBackgroundButtonAddToCart {
+    background-color: #FAF0D7;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.lightBackgroundQuantity {
+    width: 50px;
+    /* background-color: #1F1F1F; */
+    background-color: #FAF0D7;
+    border: 2px solid #1F1F1F;
+    gap: 5px
+}
+
+.lightBackgroundButtonReset {
+    background-color: #1F1F1F;
+    color: #FAF0D7;
+    border: 2px;
+    gap: 5px
+}
+
+.lightBackgroundButtonAdd {
+    background-color: #1F1F1F;
+    color: #FAF0D7;
+    border: 2px;
+    gap: 5px
+}
+
+.lightBackgroundButtonSubs {
+    background-color: #1F1F1F;
+    color: #FAF0D7;
+    border: 2px;
+    gap: 5px
+}
+
+.lightBackgroundButtonAddToCart {
+    background-color: #1F1F1F;
+    color: #FAF0D7;
+    border: 2px;
+    gap: 5px
+}

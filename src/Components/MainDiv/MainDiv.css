@@ -4,21 +4,29 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "1 2"
-        "3 3";
+        "3 4";
 }
 
 .darkBackgroundLogo {
-    fill: white;
-    stroke: white;
+    border: 5px solid #FAF0D7;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 30px;
+    fill: #FAF0D7;
+    stroke: black;
     background-color: #1F1F1F;
     max-width: 400px;
     max-height: 400px;
 }
 
 .lightBackgroundLogo {
+    border: 5px solid black;
+    border-radius: 30px;
+    padding: 50px;
+    margin: 50px;
     fill: black;
     stroke: black;
-    background-color: #EFEAD8;
+    background-color: #FAF0D7;
     max-width: 400px;
     max-height: 400px;
 }

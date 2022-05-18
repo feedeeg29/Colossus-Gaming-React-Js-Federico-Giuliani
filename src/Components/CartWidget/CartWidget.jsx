@@ -1,13 +1,16 @@
 import React, { useContext } from 'react'
-import CartWidgetIMG from './CartWidget.png';
 import { CartContext } from "../../Components/Context/CartContext/CartContext"
 import 'react-toastify/dist/ReactToastify.css';
+import { ThemeContext } from '../Context/ThemeContext/ThemeContext';
+import { ReactComponent as CartW } from "./CartWidget.svg"
+import './CartWidget.css'
 export default function CartWidget() {
+    const { darkTheme } = useContext(ThemeContext)
     let { cart } = useContext(CartContext);
     if (cart.length !== 0) {
         return (
             <>
-                <span style={{ color: "#EEEEEE" }}>{cart.length}<img src={CartWidgetIMG} alt="" width="50px" className="Cart"></img></span>
+                <span className={darkTheme ? 'darkThemeWidget Cart' : 'lightThemeWidget Cart'} >{cart.length}<CartW alt="" className={darkTheme ? 'darkThemeWidget Cart' : 'lightThemeWidget Cart'} ></CartW></span>
             </>
         )
     }

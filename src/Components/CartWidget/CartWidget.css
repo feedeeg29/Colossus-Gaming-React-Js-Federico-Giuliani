@@ -1,0 +1,11 @@
+.darkThemeWidget {
+    color: #FAF0D7;
+    width: 30px;
+    fill: #FAF0D7;
+    stroke: #FAF0D7;
+}
+
+.lightThemeWidget {
+    color: black;
+    width: 30px;
+}

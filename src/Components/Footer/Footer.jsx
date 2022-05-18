@@ -23,8 +23,8 @@ export default function Footer() {
                 <a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com" >
                     <Twitter className={`${darkTheme ? 'darkBackgroundSocialMedia' : 'lightBackgroundSocialMedia'}`} />
                 </a>
-                <Link to={'/ContactForm'}>Contactenos</Link>
-                <Link to={'/AboutUs'} style={{ textDecoration: "none" }}>About Us</Link>
+                <Link to={'/ContactForm'} className={`${darkTheme ? 'darkBackgroundSocialMedia' : 'lightBackgroundSocialMedia'}`}>Contactenos</Link>
+                <Link to={'/AboutUs'} className={`${darkTheme ? 'darkBackgroundSocialMedia' : 'lightBackgroundSocialMedia'}`}>About</Link>
             </footer>
         </>
     )

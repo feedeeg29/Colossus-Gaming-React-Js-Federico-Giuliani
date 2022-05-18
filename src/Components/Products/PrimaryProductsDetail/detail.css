@@ -7,18 +7,19 @@
     width: 1rem;
 }
 
-.detail-container {}
-
-.darkBackgroundDetail {
-
+.darkLightgroundDetail {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
     width: 18rem;
-    background-color: #FAF0D7;
+    background-color: black;
 }
 
 .darkBackgroundCard {
-
+    border: 1px solid #FAF0D7;
     width: 18rem;
-    background-color: #FAF0D7;
+    background-color: black;
+    /* background-color: #FAF0D7; */
 }
 
 .lightBackgroundDetail {
@@ -26,7 +27,19 @@
     width: 18rem;
 }
 
-.lightBackgroundCard {
+.darkBackgroundTitle {
+    color: #FAF0D7;
+}
 
+.darkBackgroundPrice {
+    color: #FAF0D7;
+}
+
+.lightBackgroundTitle {
+    color: #FAF0D7;
+}
+
+.lightBackgroundCard {
+    background-color: #FAF0D7;
     width: 18rem;
 }
