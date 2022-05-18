@@ -4,6 +4,22 @@
 
 }
 
+.darkBackgroundListOrder {
+
+    border: 1px solid #FAF0D7;
+    border-radius: 15px;
+    background-color: #FAF0D7;
+    color: #1F1F1F;
+}
+
+.lightBackgroundListOrder {
+
+    border: 1px solid #FAF0D7;
+    border-radius: 15px;
+    color: #FAF0D7;
+    background-color: #1F1F1F;
+}
+
 .darkThemeContainer {
     border: 1px solid #FAF0D7;
 

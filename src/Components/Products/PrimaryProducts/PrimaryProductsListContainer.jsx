@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ThemeContext } from "../../Context/ThemeContext/ThemeContext";
 import PrimaryProductsList from "./PrimaryProducstList";
 import { getProductsByCategoryIdDesc, getProductsByCategoryIdAsc } from "./PrimaryProductsJS/PrimaryProductCategory";
 import "./stylebasic.css";
 export default function PrimaryProductsListContainer() {
     const [primaryProductsRender, setProductsPrimaryRender] = useState([]);
+    const { darkTheme } = useContext(ThemeContext);
     const { categoryId } = useParams();
     const [orden, setOrden] = useState(true);
     function handleOrden() {
         setOrden(!orden);
-        console.log(orden);
     }
     useEffect(() => {
         if (categoryId) {
@@ -22,9 +23,9 @@ export default function PrimaryProductsListContainer() {
     }, [categoryId, orden]);
     return (
         <>
-            <div><select type="select" onChange={handleOrden}>
-                <option>menor precio</option>
-                <option>mayor precio</option>
+            <div ><select type="select" onChange={handleOrden}>
+                <option className={`${darkTheme ? 'darkBackgroundListOrder' : 'lightBackgroundListOrder'}`}>menor precio</option>
+                <option className={`${darkTheme ? 'darkBackgroundListOrder' : 'lightBackgroundListOrder'}`}>mayor precio</option>
             </select>
             </div>
             <div className="what">

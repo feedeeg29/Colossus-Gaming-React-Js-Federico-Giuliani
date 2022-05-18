@@ -1,10 +1,8 @@
 .MainDiv {
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "1 2"
-        "3 4";
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .darkBackgroundLogo {
@@ -19,7 +17,47 @@
     max-height: 400px;
 }
 
+.darkBackgroundLogoRAM {
+    border: 5px solid #FAF0D7;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 30px;
+    fill: #FAF0D7;
+    stroke: #FAF0D7;
+    background-color: #1F1F1F;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.darkBackgroundLogo:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.lightBackgroundLogo:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.darkBackgroundLogoRAM:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.lightBackgroundLogoRAM:hover {
+    transform: scale(1.5, 1.5);
+}
+
 .lightBackgroundLogo {
+    border: 5px solid black;
+    border-radius: 30px;
+    padding: 50px;
+    margin: 50px;
+    fill: black;
+    stroke: black;
+    background-color: #FAF0D7;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.lightBackgroundLogoRAM {
     border: 5px solid black;
     border-radius: 30px;
     padding: 50px;

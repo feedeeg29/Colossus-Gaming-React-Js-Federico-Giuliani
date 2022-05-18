@@ -21,7 +21,6 @@ export default function ContactForm() {
         const queryCollection = collection(db, 'Contact');
         addDoc(queryCollection, inQuery).then(({ id }) => {
             setQueryCode(id);
-            console.log(queryCode);
         })
     }
     return (

@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCzRuLhaYc8EzVtI254jx18uCC3MTQNDNM",
+  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
   authDomain: "colossus-gaming.firebaseapp.com",
   projectId: "colossus-gaming",
   storageBucket: "colossus-gaming.appspot.com",
@@ -22,8 +22,4 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

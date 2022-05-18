@@ -1,10 +1,12 @@
 import React, { useState, useContext } from 'react'
-import { addDoc, collection, getFirestore, serverTimestamp, getDocs, doc, updateDoc } from "firebase/firestore";
+import { addDoc, collection, getFirestore, serverTimestamp, doc, updateDoc } from "firebase/firestore";
 import { CartContext } from "../../Components/Context/CartContext/CartContext";
 import { Form, Button, Modal } from 'react-bootstrap';
+import { ThemeContext } from '../Context/ThemeContext/ThemeContext';
+import './BuyOrder.css'
 export default function BuyOrder() {
     const { cart, clearCart, total } = useContext(CartContext);
-
+    const { darkTheme } = useContext(ThemeContext);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -35,16 +37,14 @@ export default function BuyOrder() {
         const queryUpdate = doc(dbs, 'productsPrimaryArray', prod.Id)
         if (prod.stock > 0) {
             newStock = (prod.stock - prod.quantity)
-            console.log(prod.id)
         }
-        console.log(queryUpdate);
         updateDoc(queryUpdate, { stock: newStock })
         return (console.log(newStock))
     })
     return (
         <>
 
-            <div>
+            <div className='buyForm'>
                 <Form onSubmit={(e) => { e.preventDefault(); sendOrder() }}>
                     <input type="text" value={name} name="nameForm" id="nameForm" placeholder="name"
                         onChange={(e) => setName(e.target.value)} required
@@ -60,8 +60,8 @@ export default function BuyOrder() {
                     />
                     {
                         cart.length === 0 ?
-                            <Button variant="contained" disabled>Enviar</Button> :
-                            <Button onClick={handleOpen} type="submit" variant="contained">Enviar</Button>
+                            <Button variant="contained" disabled className={`${darkTheme ? 'darkThemeBuyButton' : 'lightThemeBuyButton'}`}>Enviar</Button> :
+                            <Button onClick={handleOpen} type="submit" variant="contained" className={`${darkTheme ? 'darkThemeBuyButton' : 'lightThemeBuyButton'}`}>Enviar</Button>
                     }
                 </Form>
                 {

@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as MSILogo } from './MSILogo.svg';
 import { ReactComponent as NvidiaLogo } from './LogoNvidia.svg';
+import { ReactComponent as IntelLogo } from './LogoIntel.svg'
+import { ReactComponent as RAMLogo } from './RAMs.svg'
 import "./MainDiv.css";
 import { ThemeContext } from "../../Components/Context/ThemeContext/ThemeContext";
 export default function MainDiv() {
@@ -21,6 +23,16 @@ export default function MainDiv() {
                         {/* <img src={MSILogo} fill="black" alt="MSI-Logo-Publicity-Buy-MotherBoards-Brand" className="card_image container-fluid" /> */}
                     </div>
                 </Link>
+            </section>
+            <section>
+                <div>
+                    <Link to={'/category/Processors'}><IntelLogo className={`${darkTheme ? 'darkBackgroundLogo' : 'lightBackgroundLogo'}`} /></Link>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <Link to={'/category/Processors'}><RAMLogo className={`${darkTheme ? 'darkBackgroundLogoRAM' : 'lightBackgroundLogoRAM'}`} /></Link>
+                </div>
             </section>
         </div>
     );

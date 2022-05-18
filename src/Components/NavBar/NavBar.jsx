@@ -17,10 +17,11 @@ export default function MyNavBar() {
                         <Link to={'/'} className={`${darkTheme ? 'darkBackgroundLink' : 'lightBackgroundLink'}`} ><div className={`${darkTheme ? 'darkBackgroundBrand' : 'lightBackgroundBrand'}`}>Colossus-Gaming</div></Link>
                         <Navbar.Collapse id="responsive-navbar-nav" className="pull-left"  >
                             <Nav className="me-auto">
-                                <Link to={'/'} fix="bottom" className={`${darkTheme ? 'darkBackgroundLink' : 'lightBackgroundLink'}`}> Home</Link>
+
                                 <Link to={'category/GPUs'} fix="bottom" className={`${darkTheme ? 'darkBackgroundLink Active' : 'lightBackgroundLink Active'}`}>GPUs</Link>
                                 <Link to={'category/MotherBoards/'} fix="bottom" className={`${darkTheme ? 'darkBackgroundLink' : 'lightBackgroundLink'}`}>MotherBoards</Link>
                                 <Link to={'category/Processors/'} fix="bottom" className={`${darkTheme ? 'darkBackgroundLink' : 'lightBackgroundLink'}`}>Procesadores</Link>
+                                <Link to={'category/RAMs/'} fix="bottom" className={`${darkTheme ? 'darkBackgroundLink' : 'lightBackgroundLink'}`}>RAMs</Link>
                                 <Link to={'/Cart/Cart'} fix="bottom" className={`${darkTheme ? 'darkBackgroundLink' : 'lightBackgroundLink'}`}> <CartWidget /></Link>
                             </Nav>
                             <ThemeButton />

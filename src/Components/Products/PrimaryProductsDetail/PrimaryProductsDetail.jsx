@@ -10,10 +10,8 @@ export default function PrimaryProductsDetail({ Id, name, img, price, stock }) {
     const { darkTheme } = useContext(ThemeContext);
     function handleOnAdd(quantity) {
         addToCart({ Id, name, img, price, stock }, quantity)
-        console.log(added)
     }
     const added = cart.find((item) => item.Id === Id);
-    console.log(added);
     return (
         <>
             {stock > 0 ?

@@ -1,14 +1,72 @@
-.Cart-grid {
-    /*display: flex;
+.Cart-Grid {
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.Card-basic {
+    display: flex;
     place-content: center;
     padding: 1rem;
     margin: 1rem;
     height: 1rem;
     width: 1rem;
-    */
-    display: grid;
-    grid-template-rows: repeat(auto-fill, minmax(15rem, 1fr));
-    align-items: center;
+}
+
+.darkLightgroundDetail {
+    display: flex;
     justify-content: center;
-    gap: 1rem;
+    justify-items: center;
+    width: 18rem;
+    background-color: #1F1F1F;
+}
+
+.darkBackgroundCard {
+    border: 1px solid #FAF0D7;
+    width: 18rem;
+    background-color: #1F1F1F;
+}
+
+.lightBackgroundDetail {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    width: 18rem;
+}
+
+.darkBackgroundTitle {
+    color: #FAF0D7;
+}
+
+.darkBackgroundPrice {
+    color: #FAF0D7;
+}
+
+.lightBackgroundTitle {
+    color: #1F1F1F;
+}
+
+.lightBackgroundPrice {
+    color: #1F1F1F;
+}
+
+.lightBackgroundCard {
+    background-color: #FAF0D7;
+    width: 18rem;
+}
+
+.darkBackgroundButton {
+    background-color: #FAF0D7;
+    color: #1F1F1F;
+    border: 2px solid #1F1F1F;
+}
+
+.lightBackgroundButton {
+    background-color: #1F1F1F;
+    color: #FAF0D7;
+    border: 2px;
+    gap: 5px
 }
