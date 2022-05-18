@@ -7,13 +7,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainDiv from './Components/MainDiv/MainDiv.jsx';
 import PrimaryProductsDetailContainer from '../src/Components/Products/PrimaryProductsDetail/PrimaryProductsDetailContainer';
 import Cart from './Components/Cart/Cart';
-import CartContextProvider from './Components/CartContext/CartContext';
+import CartContextProvider from './Components/Context/CartContext/CartContext';
 import BuyOrder from './Components/BuyOrder/BuyOrder';
 import Footer from './Components/Footer/Footer';
 import ContactForm from './Components/ContactForm/ContactForm';
+import ThemeContextProvider from './Components/Context/ThemeContext/ThemeContext';
 export default function App() {
   return (
 <>
+<ThemeContextProvider>
 <CartContextProvider>
 <BrowserRouter>
 <MyNavBar />
@@ -28,6 +30,7 @@ export default function App() {
 <Footer/>
 </BrowserRouter>
 </CartContextProvider>
+</ThemeContextProvider>
 </>
   );
 }

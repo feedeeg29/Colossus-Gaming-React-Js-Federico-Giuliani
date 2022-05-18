@@ -6,3 +6,19 @@
     grid-template-areas: "1 2"
         "3 3";
 }
+
+.darkBackgroundLogo {
+    fill: white;
+    stroke: white;
+    background-color: #1F1F1F;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.lightBackgroundLogo {
+    fill: black;
+    stroke: black;
+    background-color: #EFEAD8;
+    max-width: 400px;
+    max-height: 400px;
+}

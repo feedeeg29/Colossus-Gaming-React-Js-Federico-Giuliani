@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react'
-import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
-import { CartContext } from '../CartContext/CartContext';
+import { addDoc, collection, getFirestore, serverTimestamp, getDocs, doc, updateDoc } from "firebase/firestore";
+import { CartContext } from "../../Components/Context/CartContext/CartContext";
 import { Form, Button, Modal } from 'react-bootstrap';
 export default function BuyOrder() {
     const { cart, clearCart, total } = useContext(CartContext);
@@ -10,6 +10,8 @@ export default function BuyOrder() {
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
     const [orderCode, setOrderCode] = useState('');
+    let newStock = 0
+    // const db = getFirestore();
 
     const order = {
         buyer: { name: name, phone: phone, email: email, address: address },
@@ -28,8 +30,20 @@ export default function BuyOrder() {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    cart.map(prod => {
+        const dbs = getFirestore();
+        const queryUpdate = doc(dbs, 'productsPrimaryArray', prod.Id)
+        if (prod.stock > 0) {
+            newStock = (prod.stock - prod.quantity)
+            console.log(prod.id)
+        }
+        console.log(queryUpdate);
+        updateDoc(queryUpdate, { stock: newStock })
+        return (console.log(newStock))
+    })
     return (
         <>
+
             <div>
                 <Form onSubmit={(e) => { e.preventDefault(); sendOrder() }}>
                     <input type="text" value={name} name="nameForm" id="nameForm" placeholder="name"
@@ -72,7 +86,7 @@ export default function BuyOrder() {
                                 <h2>{orderCode}</h2>
                             </Modal.Body>
                             <Modal.Footer>
-                                <Button onClick={handleClose}>Close</Button>
+                                <Button onClick={handleClose} >Close</Button>
                             </Modal.Footer>
                         </Modal>
                 }

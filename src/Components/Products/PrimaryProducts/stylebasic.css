@@ -1,9 +1,17 @@
+.lightThemeLetras {
+    color: black;
+    text-decoration: none;
+}
+
+.darkThemeLetras {
+    color: #FAF0D7;
+    text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
     .product-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(15rem, 25vw));
-        /* align-items: center; */
-        /* justify-content: center; */
     }
 
     .list-Container {

@@ -13,6 +13,7 @@ export default function PrimaryProductsDetailContainer() {
             getProductsById(Id).then(prods => setItems(prods));
         }
     }, [Id]);
+    console.log(primaryProductsDetailRender);
     return (
         <>
             <PrimaryProductsDetail key={primaryProductsDetailRender.Id} Id={primaryProductsDetailRender.Id} img={primaryProductsDetailRender.img} name={primaryProductsDetailRender.name} price={primaryProductsDetailRender.price} stock={primaryProductsDetailRender.stock} />

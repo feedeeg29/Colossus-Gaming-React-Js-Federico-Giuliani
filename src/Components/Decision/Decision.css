@@ -1,0 +1,16 @@
+.DecisionDarkMode {
+    background-color: wheat;
+    color: black;
+    margin: 1px;
+    border: 2px solid black;
+    gap: 10px;
+}
+
+.DecisionLightMode {
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+    margin: 1px;
+    gap: 10px;
+    margin: 1px;
+}

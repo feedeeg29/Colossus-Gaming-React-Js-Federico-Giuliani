@@ -1,12 +1,14 @@
-import { Button } from 'react-bootstrap'
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import { Button } from 'react-bootstrap';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ThemeContext } from '../Context/ThemeContext/ThemeContext';
+import './Decision.css';
 export default function Decision() {
+    const { darkTheme } = useContext(ThemeContext)
     return (
         <>
-            <Button variant='dark'><Link to={'/Cart/Cart'}>Finalizar Compra</Link></Button>
-            <Button variant='info'><Link to={'/category'}>Continuar Comprando</Link></Button>
+            <Link to={'/Cart/Cart'} ><Button className={`${darkTheme ? 'DecisionDarkMode' : 'DecisionLightMode'}`}>Finalizar Compra</Button></Link>
+            <Link to={'/category'} ><Button className={`${darkTheme ? 'DecisionDarkMode' : 'DecisionLightMode'}`}>Continuar Comprando</Button></Link>
         </>
     )
 }

@@ -7,7 +7,26 @@
     width: 1rem;
 }
 
-.detail-container {
-    display: flex;
-    place-content: center;
+.detail-container {}
+
+.darkBackgroundDetail {
+
+    width: 18rem;
+    background-color: #FAF0D7;
+}
+
+.darkBackgroundCard {
+
+    width: 18rem;
+    background-color: #FAF0D7;
+}
+
+.lightBackgroundDetail {
+
+    width: 18rem;
+}
+
+.lightBackgroundCard {
+
+    width: 18rem;
 }

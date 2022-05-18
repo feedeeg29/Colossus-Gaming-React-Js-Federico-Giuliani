@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function ItemCount({ stock, onAdd, productsPrimaryRender }) {
     const [count, setCount] = useState(1);
     function add() {
-        if (count < stock) {
+        if (count <= stock) {
             setCount(count + 1);
         };
     };
