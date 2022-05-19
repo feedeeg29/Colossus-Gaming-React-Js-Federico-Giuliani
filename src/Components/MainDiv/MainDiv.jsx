@@ -31,7 +31,7 @@ export default function MainDiv() {
             </section>
             <section>
                 <div>
-                    <Link to={'/category/Processors'}><RAMLogo className={`${darkTheme ? 'darkBackgroundLogoRAM' : 'lightBackgroundLogoRAM'}`} /></Link>
+                    <Link to={'/category/RAMs'}><RAMLogo className={`${darkTheme ? 'darkBackgroundLogoRAM' : 'lightBackgroundLogoRAM'}`} /></Link>
                 </div>
             </section>
         </div>
