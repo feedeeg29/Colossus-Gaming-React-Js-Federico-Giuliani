@@ -3,7 +3,7 @@
 <img src="https://github.com/feedeeg29/Colossus-Gaming-React-Js-Federico-Giuliani/blob/main/ezgif.com-gif-maker.gif" />
 <p>Deploy on https://colossus-gaming.web.app</p>
 <p> repository on : https://github.com/feedeeg29/Colossus-Gaming-React-Js-Federico-Giuliani.git </p>
-<p> special thanks to everyone on 
+<p> special thanks to everyone on CoderHouse Batch n°31140</p>
 #Librerias usadas
 React JS
 React Router
