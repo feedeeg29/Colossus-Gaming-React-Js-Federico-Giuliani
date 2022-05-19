@@ -30,7 +30,7 @@ export default function MainDiv() {
                 </div>
             </section>
             <section>
-                <div>
+                <div className="divrams">
                     <Link to={'/category/RAMs'}><RAMLogo className={`${darkTheme ? 'darkBackgroundLogoRAM' : 'lightBackgroundLogoRAM'}`} /></Link>
                 </div>
             </section>
