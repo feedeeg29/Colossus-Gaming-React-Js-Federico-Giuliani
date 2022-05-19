@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_APIKEY,
+  apiKey: process.env.REACT_APP_RAPID_API_KEY,
   authDomain: "colossus-gaming.firebaseapp.com",
   projectId: "colossus-gaming",
   storageBucket: "colossus-gaming.appspot.com",
